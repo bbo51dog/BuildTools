@@ -1,0 +1,10 @@
+{
+    "name": "bbo51dog/template",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "LGPL-2.1-only",
+    "require": {
+        "pocketmine/pocketmine-mp": "4.*",
+        "ext-yaml": "*"
+    }
+}

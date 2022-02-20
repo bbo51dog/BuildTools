@@ -1,0 +1,8 @@
+name: BuildTools
+author: bbo51dog
+api: 4.0.0
+main: bbo51dog\buildtools\BuildToolsPlugin
+version: 1.0.0
+permissions:
+  buildtools.command.buildplugin:
+    default: op
