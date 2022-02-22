@@ -7,6 +7,10 @@ use pocketmine\plugin\PluginBase;
 
 class BuildToolsPlugin extends PluginBase {
 
+    protected function onLoad(): void {
+        require_once __DIR__ . "/../../BuildScript.php";
+    }
+
     protected function onEnable(): void {
         $this->prepareDirectory($buildsDir = $this->getDataFolder() . "builds/");
         $this->prepareDirectory($pluginsDir = $this->getDataFolder() . "plugins/");
