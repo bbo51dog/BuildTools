@@ -8,13 +8,14 @@ use pocketmine\plugin\PluginBase;
 class BuildToolsPlugin extends PluginBase {
 
     protected function onLoad(): void {
-        require_once __DIR__ . "/../../BuildScript.php";
+        require_once __DIR__ . "/script/BuildScript.php";
     }
 
     protected function onEnable(): void {
         $this->prepareDirectory($buildsDir = $this->getDataFolder() . "builds/");
         $this->prepareDirectory($pluginsDir = $this->getDataFolder() . "plugins/");
-        $this->getServer()->getCommandMap()->register("buildtools", new BuildPluginCommand($buildsDir, $pluginsDir));
+        $this->prepareDirectory($virionsDir = $this->getDataFolder() . "virions/");
+        $this->getServer()->getCommandMap()->register("buildtools", new BuildPluginCommand($buildsDir, $pluginsDir, $virionsDir));
     }
 
     private function prepareDirectory(string $dir) {
